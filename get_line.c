@@ -45,20 +45,17 @@ int get_line(char *buffer, char *bufCopy, char **env, char *path)
 		getRet = getline(&buffer, &bufSize, stdin);
 		strtok(buffer, "\n");
 	}
-
 	if (_strcmp(buffer, "exit") == 0 || getRet == EOF)
 	{
 		frees(bufCopy, NULL, path, buffer);
-		exit(2);
+		return (1);
 	}
-
 	if (_strcmp(buffer, "\n") == 0 || _spaces(buffer) == 0)
 	{
 		free(bufCopy);
 		free(buffer);
 		return (-1);
 	}
-
 	if (_strcmp(buffer, "env") == 0)
 	{
 		while (env[i] != NULL)
