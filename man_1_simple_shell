@@ -1,0 +1,48 @@
+.\" Manpage for simple_shell
+.TH Simple_shell 1 "22 April 2022" "1.0" "simple_shell man page"
+
+.SH NAME
+
+.B simple_shell 
+- command interpreter (shell)
+
+.SH SYNOPSIS
+
+.B ./hsh
+
+.SH DESCRIPTION
+Simple_shell is a command interpreter for the system that understands and executes the commands that user enters. Commands can be typed directly to the running shell or can be put into a file and the file can be executed directly by the shell. The Simple_shell is considered an interactive shell, an interactive shell generally prompts before each command.
+
+When the shell start spects a command, concatenates that command with every posible PATH and if the command match with some of the executables on any PATH, it runs the command with the argument passed.
+
+.SH ARGUMENTS
+
+.B command
+.RB [ARGUMENTS]...
+
+Simple_shell allows users to pass run time arguments to these commands. These arguments, also known as command line parameters, that allows the users to either control the flow of the command or to specify the input data for the command.
+
+The simple_shell reads input in terms of lines from a file and breaks it up into words at whitespace (blanks and tabs), and at certain sequences of characters that are special to the shell called “operators”.
+
+Following is a list of operators:
+
+	& && ( ) ; ;; | ||
+
+.SH SHELL GRAMMAR
+A simple command is a sequence of optional variable assignments followed by blank-separated words and redirections, and terminated by a control operator. The first word specifies the command to be executed, and is passed as argument zero. The remaining words are passed as arguments to the invoked command.
+
+.SH SEE ALSO
+.nf
+	man sh(1)
+	man ksh(1)
+	man csh(1)
+
+.SH COPYRIGHT
+
+Copyright © 2018 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
+
+.SH AUTHOR
+.PP
+Written by Jaime Rodriguez and Jerson Castro.
+
