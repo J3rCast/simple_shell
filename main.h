@@ -18,7 +18,7 @@ char *_strcpy(char *dest, char *src);
 int _strlen(char *c);
 int _strcmp(char *s1, char *s2);
 char *_getenv(char *name, char **env);
-int get_line(char *buffer, char *bufCopy, char **env, char *path);
+int get_line(char *buffer, char *bufCopy, char **env);
 char **_args(int dpCount, char *bufCopy, char *buffer, int bufSize,
 char tempToken[100][500]);
 void frees(char *bufCopy, char **args, char *path, char *buffer);

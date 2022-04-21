@@ -29,9 +29,9 @@ __attribute__((unused))char *argv[], char **env)
 			free(bufCopy);
 			return (1);
 		}
-		getRet = get_line(buffer, bufCopy, env, path);
+		getRet = get_line(buffer, bufCopy, env);
 		if (getRet == 1)
-			exit(2);
+			break;
 		if (getRet == -1)
 			continue;
 		while (path[i])

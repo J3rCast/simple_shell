@@ -24,7 +24,7 @@ int _spaces(char *buffer)
  * @env: a pointer to enviroment variables
  * Return: 1 or 0
  */
-int get_line(char *buffer, char *bufCopy, char **env, char *path)
+int get_line(char *buffer, char *bufCopy, char **env)
 {
 	size_t bufSize = 280;
 	int getRet = 0, i = 0;
@@ -46,10 +46,7 @@ int get_line(char *buffer, char *bufCopy, char **env, char *path)
 		strtok(buffer, "\n");
 	}
 	if (_strcmp(buffer, "exit") == 0 || getRet == EOF)
-	{
-		frees(bufCopy, NULL, path, buffer);
 		return (1);
-	}
 	if (_strcmp(buffer, "\n") == 0 || _spaces(buffer) == 0)
 	{
 		free(bufCopy);
