@@ -1,4 +1,4 @@
-# Simple Shell - Draft
+#Simple Shell - Draft
 
 ![Holberton School](images/J&JShell.png)
 
